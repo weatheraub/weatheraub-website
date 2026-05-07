@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>WeatherAub</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		html,
+		body {
+			height: 100%;
+			margin: 0;
+		}
+
+		body {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: #ffffff;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+
+		.hero {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 1rem;
+		}
+
+		.site-name {
+			font-size: clamp(1.5rem, 2vw, 3rem);
+			font-weight: 600;
+			color: #000000;
+			letter-spacing: 0.0em;
+		}
+
+		.social-row {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.9rem;
+			flex-wrap: wrap;
+		}
+
+		.social-link {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 2.1rem;
+			height: 2.1rem;
+			color: #111111;
+			border-radius: 999px;
+			text-decoration: none;
+			transition: transform 140ms ease, background-color 140ms ease, color 140ms ease;
+		}
+
+		.social-link svg {
+			width: 1.15rem;
+			height: 1.15rem;
+			fill: currentColor;
+		}
+
+		.social-link:hover,
+		.social-link:focus-visible {
+			background: #f2f2f2;
+			transform: translateY(-2px);
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="hero">
+		<div class="site-name">weatheraub.com</div>
+		<nav class="social-row" aria-label="Social media links">
+			<a class="social-link" href="https://x.com/weatheraub" target="_blank" rel="noopener noreferrer" aria-label="X">
+				<svg viewBox="0 0 24 24" aria-hidden="true">
+					<path d="M18.901 1.153h3.68l-8.04 9.19L24 22.847h-7.406l-5.8-7.584-6.637 7.584H.479l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zM17.604 20.624h2.04L6.486 3.26H4.298l13.306 17.364z" />
+				</svg>
+			</a>
+			<a class="social-link" href="https://www.youtube.com/@weatheraub" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+				<svg viewBox="0 0 24 24" aria-hidden="true">
+					<path d="M23.498 6.186a2.98 2.98 0 0 0-2.098-2.11C19.556 3.5 12 3.5 12 3.5s-7.556 0-9.4.576a2.98 2.98 0 0 0-2.098 2.11A31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .502 5.814 2.98 2.98 0 0 0 2.098 2.11C4.444 20.5 12 20.5 12 20.5s7.556 0 9.4-.576a2.98 2.98 0 0 0 2.098-2.11A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.502-5.814zM9.75 15.568V8.432L16 12l-6.25 3.568z" />
+				</svg>
+			</a>
+			<a class="social-link" href="https://www.instagram.com/weatheraub/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+				<svg viewBox="0 0 24 24" aria-hidden="true">
+					<path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5zm9.2 1.35a1.35 1.35 0 1 1 0 2.7 1.35 1.35 0 0 1 0-2.7zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4z" />
+				</svg>
+			</a>
+			<a class="social-link" href="https://www.facebook.com/weatheraub" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+				<svg viewBox="0 0 24 24" aria-hidden="true">
+					<path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.2v2.2H8v3.1h2.2v8h3.3z" />
+				</svg>
+			</a>
+			<a class="social-link" href="https://www.tiktok.com/@weatheraub" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+				<svg viewBox="0 0 24 24" aria-hidden="true">
+					<path d="M14.5 2h3.1a4.8 4.8 0 0 0 4.4 4.1v3.1a7.7 7.7 0 0 1-4.4-1.4v7.4a6.2 6.2 0 1 1-6.2-6.2c.4 0 .8 0 1.2.1v3.2a3 3 0 1 0 1.9 2.9V2z" />
+				</svg>
+			</a>
+		</nav>
+	</div>
+</body>
+</html>
